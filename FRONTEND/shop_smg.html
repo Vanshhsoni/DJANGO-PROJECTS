@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navbar Menu Hover Effect</title>
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        .CATEGORY .animation {
+            position: absolute;
+            height: 2px; /* Height of the underline */
+            top: 45px; /* Position of the animation */
+            background-color: #ffffff; /* White for the animation background */
+            border-radius: 8px;
+            transition: all 0.5s ease 0s;
+            left : 25.7%;
+            width: 55px;
+        }
+        
+        /* Link-specific animation targets */
+        .CATEGORY a:nth-child(1):hover ~ .animation {
+            width: 50px;
+            left: 55px; /* Position under the first link */
+        }
+        
+        .CATEGORY a:nth-child(2):hover ~ .animation {
+            width: 55px;
+            left: 14.5%; /* Position under the second link */
+        }
+        
+        .CATEGORY a:nth-child(3):hover ~ .animation {
+            width: 55px;
+            left: 25.7%; /* Position under the third link */
+        }
+        
+        .CATEGORY a:nth-child(4):hover ~ .animation {
+            width: 40px;
+            left: 37.5%; /* Position under the fourth link */
+        }
+        
+        .CATEGORY a:nth-child(5):hover ~ .animation {
+            width: 100px;
+            left: 46.5%; /* Position under the fifth link */
+        }
+        
+        .CATEGORY a:nth-child(6):hover ~ .animation {
+            width: 100px;
+            left: 57.5%; /* Position under the sixth link */
+        }
+        
+        .CATEGORY a:nth-child(7):hover ~ .animation {
+            width: 75px;
+            left: 69.9%; /* Position under the seventh link */
+        }
+        
+        .CATEGORY a:nth-child(8):hover ~ .animation {
+            width: 100px;
+            left: 79.5%; /* Position under the eighth link */
+        }
+        
+        .CATEGORY a:nth-child(9):hover ~ .animation {
+            width: 40px;
+            left: 93%; /* Position under the ninth link */
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="NAV">
+      <a href="index.html">Home</a>
+      <a href="shop.html" id="activesec">SHOP</a>
+      <a href="#">ORDERS</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT US</a>
+      <div class="animation"></div> <!-- Animation div placed here -->
+    </nav>
+     <div id="weapon_written"><h1>WEAPONS</h1></div>
+     <nav class="CATEGORY">
+        <a href="shop.html">AR</a>
+        <a href="shop_dmr.html">DMR</a>
+        <a href="shop_smg.html"  id ="mainsec">SMG</a>
+        <a href="shop_sr.html">SR</a>
+        <a href="shop_shotgun.html">SHOTGUN</a>
+        <a href="shop_handgun.html">HANDGUN</a>
+        <a href="shop_melee.html">MELEE</a>
+        <a href="shop_throwable.html">THROWABLE</a>
+        <a href="shop_etc.html">ETC</a>
+        <div class="animation"></div> <!-- Animation div placed here -->
+      </nav>
+      <div class="card-container">
+        <div class="card" onclick="openModal('Tommy Gun', 'Tommy Gun (Thompson Submachine Gun) - A classic submachine gun known for its high rate of fire and iconic design. Chambered in .45 ACP, it excels in close-quarters combat, delivering significant firepower and accuracy.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-tommy_gun.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M16A4 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-tommy_gun.png" alt="Tommy Gun Image" class="image2">
+          </div>
+          <h3>Tommy Gun</h3>
+        </div>
+
+        <div class="card" onclick="openModal('UMP45', 'UMP45 - A versatile submachine gun known for its balanced performance and ease of use. Chambered in .45 ACP, it offers a good mix of accuracy and stopping power, making it effective in close to medium-range engagements', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-ump45.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="UMP45 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-ump45.png" alt="M416 Image" class="image2">
+          </div>
+          <h3>UMP45</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Micro UZI', 'Micro UZI - A compact and lightweight submachine gun, known for its high rate of fire and maneuverability. Chambered in 9mm, it excels in close-quarters combat, delivering rapid fire and quick follow-up shots.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-micro_uzi.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="SCAR-L Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-micro_uzi.png" alt="Micro UZI Image" class="image2">
+          </div>
+          <h3>Micro UZI</h3>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="openModal('Vector', 'Vector - A lightweight submachine gun renowned for its low recoil and high rate of fire. Chambered in .45 ACP, it offers excellent accuracy and handling, making it a formidable choice for close to medium-range engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-vector.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="G36C Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-vector.png" alt="Vector Image" class="image2">
+          </div>
+          <h3>Vector</h3>
+        </div>
+
+        <div class="card" onclick="openModal('PP-19 Bizon', 'PP-19 Bizon - A unique submachine gun featuring a bullpup design and a distinctive horizontal magazine. Chambered in 9mm, it offers a high-capacity magazine and impressive rate of fire, making it effective for close-quarters combat.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-pp19_bizon.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="QBZ95 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-pp19_bizon.png" alt="PP-19 Bizon Image" class="image2">
+          </div>
+          <h3>PP-19 Bizon</h3>
+        </div>
+
+        <div class="card" onclick="openModal('MP5K', 'MP5K - A compact variant of the iconic MP5 submachine gun, designed for close-quarters engagements. Chambered in 9mm, it combines a high rate of fire with excellent maneuverability, making it ideal for tactical operations and personal defense.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mp5k.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="MP5K Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mp5k.png" alt="MP5K Image" class="image2">
+          </div>
+          <h3>MP5K</h3>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="openModal('MP9', 'MP9 - A lightweight and compact submachine gun, designed for versatility and ease of handling. Chambered in 9mm, it features a high rate of fire and low recoil, making it effective for close-quarters combat and tactical scenarios', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mp9.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="AUG Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mp9.png" alt="AUG Image" class="image2">
+          </div>
+          <h3>MP9</h3>
+        </div>
+
+        <div class="card" onclick="openModal('P90', 'P90 - A futuristic personal defense weapon known for its compact size and high-capacity magazine. Chambered in 5.7×28mm, it offers a unique bullpup design and a high rate of fire, making it effective for close-quarters combat and versatile tactical use.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-p90.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="FAMAS Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-p90.png" alt="FAMAS Image" class="image2">
+          </div>
+          <h3>P90</h3>
+        </div>
+
+        <div class="card" onclick="openModal('JS9', 'JS9 - A reliable and versatile submachine gun, designed for modern tactical applications. Chambered in 9mm, it offers a lightweight frame and a high rate of fire, making it effective for close to medium-range engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-js9.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="AKM Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-js9.png" alt="AKM Image" class="image2">
+          </div>
+          <h3>JS9</h3>
+        </div>
+        </div>
+      </div>
+      
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()" 
+      style="cursor: pointer; color: black; display: inline-block; transition: transform 0.3s ease, color 0.3s ease;" 
+      onmouseover="this.style.color='#ffaa00'; this.style.transform='rotate(90deg)'" 
+      onmouseout="this.style.color='black'; this.style.transform='rotate(0deg)'">&times;</span>
+    
+    <!-- Modal Title -->
+    <h2 id="modalTitle" class="hover-effect"></h2>
+    
+    <!-- Modal Content Container -->
+    <div class="modal-body">
+      <!-- Left Side: Modal Details -->
+      <div id="modalDetails" class="details"></div>
+      
+      <!-- Right Side: Modal Image -->
+      <div class="image-containerx">
+        <img id="modalImage" src="" alt="Weapon Image">
+       
+      </div>
+
+    </div>
+    <hr>
+    <div><a href="#"><button>BUY</button></a></div>
+  </div>
+  
+</div>
+
+      </body>
+      <script src="script.js"></script>
+    </html>
+

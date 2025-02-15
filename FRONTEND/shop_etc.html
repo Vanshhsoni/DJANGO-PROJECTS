@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navbar Menu Hover Effect</title>
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        .CATEGORY .animation {
+            position: absolute;
+            height: 2px; /* Height of the underline */
+            top: 45px; /* Position of the animation */
+            background-color: #ffffff; /* White for the animation background */
+            border-radius: 8px;
+            transition: all 0.5s ease 0s;
+            left: 92.9%;
+            width: 55px;
+        }
+        
+        /* Link-specific animation targets */
+        .CATEGORY a:nth-child(1):hover ~ .animation {
+            width: 50px;
+            left: 55px; /* Position under the first link */
+        }
+        
+        .CATEGORY a:nth-child(2):hover ~ .animation {
+            width: 55px;
+            left: 14.5%; /* Position under the second link */
+        }
+        
+        .CATEGORY a:nth-child(3):hover ~ .animation {
+            width: 55px;
+            left: 25.7%; /* Position under the third link */
+        }
+        
+        .CATEGORY a:nth-child(4):hover ~ .animation {
+            width: 40px;
+            left: 37.5%; /* Position under the fourth link */
+        }
+        
+        .CATEGORY a:nth-child(5):hover ~ .animation {
+            width: 100px;
+            left: 46.5%; /* Position under the fifth link */
+        }
+        
+        .CATEGORY a:nth-child(6):hover ~ .animation {
+            width: 100px;
+            left: 57.5%; /* Position under the sixth link */
+        }
+        
+        .CATEGORY a:nth-child(7):hover ~ .animation {
+            width: 75px;
+            left: 69.9%; /* Position under the seventh link */
+        }
+        
+        .CATEGORY a:nth-child(8):hover ~ .animation {
+            width: 100px;
+            left: 79.5%; /* Position under the eighth link */
+        }
+        
+        .CATEGORY a:nth-child(9):hover ~ .animation {
+            width: 40px;
+            left: 93%; /* Position under the ninth link */
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <span class="logo">
+        <img src="https://i.pinimg.com/564x/86/08/b4/8608b4ab28ce68ec2195c11878dfa5f4.jpg">
+    </span> -->
+    <nav class="NAV">
+      <a href="index.html">Home</a>
+      <a href="shop.html" id="activesec">SHOP</a>
+      <a href="#">ORDERS</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT US</a>
+      <div class="animation"></div> <!-- Animation div placed here -->
+    </nav>
+    <div class="CONTENT"> <!-- Fixed this line -->
+      <div id="weapon_written"><h1>WEAPONS</h1></div>
+      <nav class="CATEGORY">
+        <a href="shop.html">AR</a>
+        <a href="shop_dmr.html">DMR</a>
+        <a href="shop_smg.html">SMG</a>
+        <a href="shop_sr.html" >SR</a>
+        <a href="shop_shotgun.html">SHOTGUN</a>
+        <a href="shop_handgun.html">HANDGUN</a>
+        <a href="shop_melee.html" >MELEE</a>
+        <a href="shop_throwable.html">THROWABLE</a>
+        <a href="shop_etc.html"  id ="mainsec" >ETC</a>
+        <div class="animation"></div> <!-- Animation div placed here -->
+      </nav>
+      <div class="card-container">
+        <div class="card" onclick="openModal('M249', 'M249 - A lightweight, belt-fed machine gun renowned for its high rate of fire and versatility on the battlefield. Chambered in 5.56×45mm NATO, it provides sustained fire support, making it ideal for both squad and vehicle-mounted operations.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m249.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M16A4 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m249.png" alt="Mac Image" class="image2">
+          </div>
+          <h3>M249</h3>
+        </div>
+
+        <div class="card" onclick="openModal('DP-28', 'DP-28 - A Soviet light machine gun known for its unique design and reliability. Chambered in 7.62×54mmR, it features a distinctive top-mounted pan magazine with a capacity of 47 rounds. The DP-28 excels in providing sustained fire support and is effective in medium-range engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-dp28.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M416 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-dp28.png" alt="M416 Image" class="image2">
+          </div>
+          <h3>DP-28</h3>
+        </div>
+
+        <div class="card" onclick="openModal('MG3', 'MG3 - A versatile and powerful general-purpose machine gun, known for its high rate of fire and durability. Chambered in 7.62×51mm NATO, it offers a belt-fed ammunition system, allowing for sustained fire in various tactical situations, making it ideal for both mounted and dismounted roles.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mg3.png')"> <!-- Fixed this line -->
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="m24 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mg3.png" alt="SCAR-L Image" class="image2">
+          </div>
+          <h3>MG3</h3>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card" onclick="openModal('Crossbow', 'Crossbow - A ranged weapon that uses a horizontal limb system to shoot projectiles called bolts. Known for its stealth and precision, it is effective for silent takedowns and can penetrate armor, making it a versatile choice for tactical situations.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-crossbow.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M16A4 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-crossbow.png" alt="Mac Image" class="image2">
+          </div>
+          <h3>Crossbow</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Motar', 'Mortar - A portable, indirect-fire weapon designed to launch explosive shells at a high angle. It is effective for delivering heavy firepower against enemy positions and fortifications, making it a valuable asset for artillery support in both offensive and defensive operations.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mortar.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M416 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mortar.png" alt="M416 Image" class="image2">
+          </div>
+          <h3>Motar</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Panzerfaust', 'MG3 - A versatile and powerful general-purpose machine gun, known for its high rate of fire and durability. Chambered in 7.62×51mm NATO, it offers a belt-fed ammunition system, allowing for sustained fire in various tactical situations, making it ideal for both mounted and dismounted roles.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-panzerfaust.png')"> <!-- Fixed this line -->
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="m24 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-panzerfaust.png" alt="SCAR-L Image" class="image2">
+          </div>
+          <h3>Panzerfaust</h3>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card" onclick="openModal('Stun Gun', 'Stun Gun - A non-lethal self-defense device that delivers a high-voltage shock to incapacitate an attacker temporarily. It is designed for personal protection, causing muscle contractions and disorientation, making it an effective tool for deterring threats without causing permanent harm.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-stun_gun.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="AWM Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-stun_gun.png" alt="G36C Image" class="image2">
+          </div>
+          <h3>Stun Gun</h3>
+        </div>
+      </div>
+        <div class="card" onclick="openModal('M79', 'M79 - A single-shot, break-action grenade launcher known for its effectiveness in delivering explosive rounds at range. Chambered for 40mm grenades, it is lightweight and portable, making it ideal for supporting infantry in close-quarters and medium-range engagements', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m79.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="AWM Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m79.png" alt="G36C Image" class="image2">
+          </div>
+          <h3>M79</h3>
+        </div>
+        <div class="card"></div>
+
+
+
+
+      <!-- Modal Structure -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()" 
+            style="cursor: pointer; color: black; display: inline-block; transition: transform 0.3s ease, color 0.3s ease;" 
+            onmouseover="this.style.color='#ffaa00'; this.style.transform='rotate(90deg)'" 
+            onmouseout="this.style.color='black'; this.style.transform='rotate(0deg)'">&times;</span>
+          
+          <!-- Modal Title -->
+          <h2 id="modalTitle" class="hover-effect"></h2>
+          
+          <!-- Modal Content Container -->
+          <div class="modal-body">
+            <!-- Left Side: Modal Details -->
+            <div id="modalDetails" class="details"></div>
+            
+            <!-- Right Side: Modal Image -->
+            <div class="image-containerx">
+              <img id="modalImage" src="" alt="Weapon Image">
+            </div>
+          </div>
+          <hr>
+          <div><a href="#"><button>BUY</button></a></div>
+        </div>
+      </div>
+  
+    </div>
+    
+    <script>
+      function openModal(title, details, imageUrl) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDetails").innerText = details;
+        document.getElementById("modalImage").src = imageUrl;
+        document.getElementById("myModal").style.display = "block";
+      }
+  
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+  
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal")) {
+          closeModal();
+        }
+      }
+    </script>
+  </body>
+</html>

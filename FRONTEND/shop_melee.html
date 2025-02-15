@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navbar Menu Hover Effect</title>
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        .CATEGORY .animation {
+            position: absolute;
+            height: 2px; /* Height of the underline */
+            top: 45px; /* Position of the animation */
+            background-color: #ffffff; /* White for the animation background */
+            border-radius: 8px;
+            transition: all 0.5s ease 0s;
+            left: 69.9%;
+            width: 75px;
+        }
+        
+        /* Link-specific animation targets */
+        .CATEGORY a:nth-child(1):hover ~ .animation {
+            width: 50px;
+            left: 55px; /* Position under the first link */
+        }
+        
+        .CATEGORY a:nth-child(2):hover ~ .animation {
+            width: 55px;
+            left: 14.5%; /* Position under the second link */
+        }
+        
+        .CATEGORY a:nth-child(3):hover ~ .animation {
+            width: 55px;
+            left: 25.7%; /* Position under the third link */
+        }
+        
+        .CATEGORY a:nth-child(4):hover ~ .animation {
+            width: 40px;
+            left: 37.5%; /* Position under the fourth link */
+        }
+        
+        .CATEGORY a:nth-child(5):hover ~ .animation {
+            width: 100px;
+            left: 46.5%; /* Position under the fifth link */
+        }
+        
+        .CATEGORY a:nth-child(6):hover ~ .animation {
+            width: 100px;
+            left: 57.5%; /* Position under the sixth link */
+        }
+        
+        .CATEGORY a:nth-child(7):hover ~ .animation {
+            width: 75px;
+            left: 69.9%; /* Position under the seventh link */
+        }
+        
+        .CATEGORY a:nth-child(8):hover ~ .animation {
+            width: 100px;
+            left: 79.5%; /* Position under the eighth link */
+        }
+        
+        .CATEGORY a:nth-child(9):hover ~ .animation {
+            width: 40px;
+            left: 93%; /* Position under the ninth link */
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <span class="logo">
+        <img src="https://i.pinimg.com/564x/86/08/b4/8608b4ab28ce68ec2195c11878dfa5f4.jpg">
+    </span> -->
+    <nav class="NAV">
+      <a href="index.html">Home</a>
+      <a href="shop.html" id="activesec">SHOP</a>
+      <a href="#">ORDERS</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT US</a>
+      <div class="animation"></div> <!-- Animation div placed here -->
+    </nav>
+    <div class="CONTENT"> <!-- Fixed this line -->
+      <div id="weapon_written"><h1>WEAPONS</h1></div>
+      <nav class="CATEGORY">
+        <a href="shop.html">AR</a>
+        <a href="shop_dmr.html">DMR</a>
+        <a href="shop_smg.html">SMG</a>
+        <a href="shop_sr.html" >SR</a>
+        <a href="shop_shotgun.html">SHOTGUN</a>
+        <a href="shop_handgun.html">HANDGUN</a>
+        <a href="shop_melee.html"  id ="mainsec">MELEE</a>
+        <a href="shop_throwable.html">THROWABLE</a>
+        <a href="shop_etc.html" >ETC</a>
+        <div class="animation"></div> <!-- Animation div placed here -->
+      </nav>
+      <div class="card-container">
+        <div class="card" onclick="openModal('Machete', 'Machete - A large, bladed tool traditionally used for cutting through dense vegetation, but also effective as a close-combat weapon. Its heavy blade delivers powerful strikes, making it a versatile tool for survival and self-defense situations.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-machete.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M16A4 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-machete.png" alt="Mac Image" class="image2">
+          </div>
+          <h3>Machete</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Pan', 'DPan - A cast-iron frying pan known for its surprising durability in combat situations. Not only is it an effective melee weapon, delivering blunt force damage, but its solid construction also provides protection, capable of deflecting bullets when equipped on the back.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-pan.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M416 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-pan.png" alt="M416 Image" class="image2">
+          </div>
+          <h3>Pan</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Sickle', 'Sickle - A curved, hand-held agricultural tool traditionally used for harvesting, but also effective as a close-combat weapon. Its sharp blade allows for swift, slashing attacks, making it a versatile option for self-defense in close-quarters combat.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-sickle.png')"> <!-- Fixed this line -->
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="m24 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-sickle.png" alt="SCAR-L Image" class="image2">
+          </div>
+          <h3>Sickle</h3>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card" onclick="openModal('Pickaxe', 'Pickaxe - A sturdy tool with a pointed tip and a flat blade, traditionally used for breaking hard ground or rocks. In combat, its heavy and robust design makes it a powerful melee weapon capable of delivering strong, crushing blows.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-pickaxe.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="AWM Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-pickaxe.png" alt="G36C Image" class="image2">
+          </div>
+          <h3>Pickaxe</h3>
+        </div>
+      </div>
+      
+      <!-- Modal Structure -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()" 
+            style="cursor: pointer; color: black; display: inline-block; transition: transform 0.3s ease, color 0.3s ease;" 
+            onmouseover="this.style.color='#ffaa00'; this.style.transform='rotate(90deg)'" 
+            onmouseout="this.style.color='black'; this.style.transform='rotate(0deg)'">&times;</span>
+          
+          <!-- Modal Title -->
+          <h2 id="modalTitle" class="hover-effect"></h2>
+          
+          <!-- Modal Content Container -->
+          <div class="modal-body">
+            <!-- Left Side: Modal Details -->
+            <div id="modalDetails" class="details"></div>
+            
+            <!-- Right Side: Modal Image -->
+            <div class="image-containerx">
+              <img id="modalImage" src="" alt="Weapon Image">
+            </div>
+          </div>
+          <hr>
+          <div><a href="#"><button>BUY</button></a></div>
+        </div>
+      </div>
+  
+    </div>
+    
+    <script>
+      function openModal(title, details, imageUrl) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDetails").innerText = details;
+        document.getElementById("modalImage").src = imageUrl;
+        document.getElementById("myModal").style.display = "block";
+      }
+  
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+  
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal")) {
+          closeModal();
+        }
+      }
+    </script>
+  </body>
+</html>

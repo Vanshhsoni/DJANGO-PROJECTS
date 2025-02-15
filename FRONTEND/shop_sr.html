@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navbar Menu Hover Effect</title>
+    <link rel="stylesheet" href="shop.css">
+      <style>
+
+        .CATEGORY .animation {
+            position: absolute;
+            height: 2px; /* Height of the underline */
+            top: 45px; /* Position of the animation */
+            background-color: #ffffff; /* White for the animation background */
+            border-radius: 8px;
+            transition: all 0.5s ease 0s;
+            left : 37.5%;
+            width: 40px;
+        }
+        
+        /* Link-specific animation targets */
+        .CATEGORY a:nth-child(1):hover ~ .animation {
+            width: 50px;
+            left: 55px; /* Position under the first link */
+        }
+
+        .CATEGORY a:nth-child(2):hover ~ .animation {
+            width: 55px;
+            left: 14.5%; /* Position under the second link */
+        }
+
+        .CATEGORY a:nth-child(3):hover ~ .animation {
+            width: 55px;
+            left: 25.7%; /* Position under the third link */
+        }
+
+        .CATEGORY a:nth-child(4):hover ~ .animation {
+            width: 40px;
+            left: 37.5%; /* Position under the fourth link */
+        }
+
+        .CATEGORY a:nth-child(5):hover ~ .animation {
+            width: 100px;
+            left: 46.5%; /* Position under the fifth link */
+        }
+
+        .CATEGORY a:nth-child(6):hover ~ .animation {
+            width: 100px;
+            left: 57.5%; /* Position under the sixth link */
+        }
+
+        .CATEGORY a:nth-child(7):hover ~ .animation {
+            width: 75px;
+            left: 69.9%; /* Position under the seventh link */
+        }
+
+        .CATEGORY a:nth-child(8):hover ~ .animation {
+            width: 100px;
+            left: 79.5%; /* Position under the eighth link */
+        }
+
+        .CATEGORY a:nth-child(9):hover ~ .animation {
+            width: 40px;
+            left: 93%; /* Position under the ninth link */
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="NAV">
+      <a href="index.html">Home</a>
+      <a href="shop.html" id="activesec">SHOP</a>
+      <a href="#">ORDERS</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT US</a>
+      <div class="animation"></div> <!-- Animation div placed here -->
+    </nav>
+     <div id="weapon_written"><h1>WEAPONS</h1></div>
+     <nav class="CATEGORY">
+        <a href="shop.html">AR</a>
+        <a href="shop_dmr.html">DMR</a>
+        <a href="shop_smg.html">SMG</a>
+        <a href="shop_sr.html"  id ="mainsec">SR</a>
+        <a href="shop_shotgun.html">SHOTGUN</a>
+        <a href="shop_handgun.html">HANDGUN</a>
+        <a href="shop_melee.html">MELEE</a>
+        <a href="shop_throwable.html">THROWABLE</a>
+        <a href="shop_etc.html">ETC</a>
+        <div class="animation"></div> <!-- Animation div placed here -->
+      </nav>
+      <div class="card-container">
+        <div class="card" onclick="openModal('Kar98', 'Kar98k - A bolt-action sniper rifle, known for its high damage and long-range precision. It uses 7.62mm ammo and can take down targets with a single well-placed headshot.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-kar98k.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M16A4 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-kar98k.png" alt="M16A4 Image" class="image2">
+          </div>
+          <h3>Kar98</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Mosin Nagant', 'Mosin Nagant - A bolt-action sniper rifle, similar in performance to the Kar98k, using 7.62mm ammo. It excels in long-range combat with powerful headshot capabilities.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mosin_nagant.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M416 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-mosin_nagant.png" alt="M416 Image" class="image2">
+          </div>
+          <h3>Mosin Nagant</h3>
+        </div>
+
+        <div class="card" onclick="openModal('M24', 'M24 - A high-powered bolt-action sniper rifle, prized for its superior range and damage. It uses 7.62mm ammo and is capable of delivering lethal headshots, making it a top choice for long-range engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m24.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="m24 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-m24.png" alt="SCAR-L Image" class="image2">
+          </div>
+          <h3>M24</h3>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="openModal('AWM', 'AWM (Arctic Warfare Magnum) - A powerful bolt-action sniper rifle, renowned for its unmatched damage and long-range accuracy. It uses .300 Magnum ammo, capable of eliminating targets with a single shot, even through heavy armor', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-awm.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="AWM Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-awm.png" alt="G36C Image" class="image2">
+          </div>
+          <h3>AWM</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Win94', 'Win94 (Winchester Model 1894) - A lever-action marksman rifle, known for its unique iron sights and high accuracy. It uses .45 ACP ammo, excelling in medium-range combat with precise headshots', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-win94.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="Win94 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-win94.png" alt="QBZ95 Image" class="image2">
+          </div>
+          <h3>Win94</h3>
+        </div>
+
+        <div class="card" onclick="openModal('AMR', 'AMR (Anti-Material Rifle) - A devastating semi-automatic sniper rifle, designed to penetrate vehicles and heavy armor. It uses .50 BMG ammo, delivering extreme damage at long range, capable of destroying both targets and equipment with ease', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-lynx_amr.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="AMR Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-lynx_amr.png" alt="K2 Image" class="image2">
+          </div>
+          <h3>AMR</h3>
+        </div>
+    </div>
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()" 
+      style="cursor: pointer; color: black; display: inline-block; transition: transform 0.3s ease, color 0.3s ease;" 
+      onmouseover="this.style.color='#ffaa00'; this.style.transform='rotate(90deg)'" 
+      onmouseout="this.style.color='black'; this.style.transform='rotate(0deg)'">&times;</span>
+    
+    <!-- Modal Title -->
+    <h2 id="modalTitle" class="hover-effect"></h2>
+    
+    <!-- Modal Content Container -->
+    <div class="modal-body">
+      <!-- Left Side: Modal Details -->
+      <div id="modalDetails" class="details"></div>
+      
+      <!-- Right Side: Modal Image -->
+      <div class="image-containerx">
+        <img id="modalImage" src="" alt="Weapon Image">
+       
+      </div>
+
+    </div>
+    <hr>
+    <div><a href="#"><button>BUY</button></a></div>
+  </div>
+  
+</div>
+
+      </body>
+      <script src="script.js"></script>
+    </html>

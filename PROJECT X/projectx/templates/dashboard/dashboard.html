@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Dashboard</title>
+</head>
+<body>
+    <h1>Location Dashboard</h1>
+    <div id="locations">
+        <!-- Location data will be displayed here -->
+    </div>
+
+    <script>
+        // Fetch location data from the server
+        fetch('https://127.0.0.1:8000/api/locations/')  // Ensure this is the correct endpoint
+            .then(response => response.json())
+            .then(data => {
+                const locationsDiv = document.getElementById('locations');
+                // Ensure the response is an array
+                if (Array.isArray(data)) {
+                    data.forEach(location => {
+                        const locationElement = document.createElement('div');
+                        locationElement.innerHTML = `
+                            <p>Device ID: ${location.device_id}</p>
+                            <p>Latitude: ${location.latitude}</p>
+                            <p>Longitude: ${location.longitude}</p>
+                            <hr>
+                        `;
+                        locationsDiv.appendChild(locationElement);
+                    });
+                } else {
+                    locationsDiv.innerHTML = "<p>No locations available.</p>";
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching location data:', error);
+                const locationsDiv = document.getElementById('locations');
+                locationsDiv.innerHTML = "<p>Error fetching data.</p>";
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navbar Menu Hover Effect</title>
+    <link rel="stylesheet" href="shop.css">
+    <style>
+      .CATEGORY .animation {
+          position: absolute;
+          height: 2px; /* Height of the underline */
+          top: 45px; /* Position of the animation */
+          background-color: #ffffff; /* White for the animation background */
+          border-radius: 8px;
+          transition: all 0.5s ease 0s;
+          left : 46.5%;
+          width: 100px;
+      }
+      
+      /* Link-specific animation targets */
+      .CATEGORY a:nth-child(1):hover ~ .animation {
+          width: 50px;
+          left: 55px; /* Position under the first link */
+      }
+      
+      .CATEGORY a:nth-child(2):hover ~ .animation {
+          width: 55px;
+          left: 14.5%; /* Position under the second link */
+      }
+      
+      .CATEGORY a:nth-child(3):hover ~ .animation {
+          width: 55px;
+          left: 25.7%; /* Position under the third link */
+      }
+      
+      .CATEGORY a:nth-child(4):hover ~ .animation {
+          width: 40px;
+          left: 37.5%; /* Position under the fourth link */
+      }
+      
+      .CATEGORY a:nth-child(5):hover ~ .animation {
+          width: 100px;
+          left: 46.5%; /* Position under the fifth link */
+      }
+      
+      .CATEGORY a:nth-child(6):hover ~ .animation {
+          width: 100px;
+          left: 57.5%; /* Position under the sixth link */
+      }
+      
+      .CATEGORY a:nth-child(7):hover ~ .animation {
+          width: 75px;
+          left: 69.9%; /* Position under the seventh link */
+      }
+      
+      .CATEGORY a:nth-child(8):hover ~ .animation {
+          width: 100px;
+          left: 79.5%; /* Position under the eighth link */
+      }
+      
+      .CATEGORY a:nth-child(9):hover ~ .animation {
+          width: 40px;
+          left: 93%; /* Position under the ninth link */
+      }
+  </style>
+  </head>
+  <body>
+    <nav class="NAV">
+      <a href="index.html">Home</a>
+      <a href="shop.html" id="activesec">SHOP</a>
+      <a href="#">ORDERS</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT US</a>
+      <div class="animation"></div> <!-- Animation div placed here -->
+    </nav>
+     <div id="weapon_written"><h1>WEAPONS</h1></div>
+     <nav class="CATEGORY">
+        <a href="shop.html">AR</a>
+        <a href="shop_dmr.html">DMR</a>
+        <a href="shop_smg.html"  id ="mainsec">SMG</a>
+        <a href="shop_sr.html">SR</a>
+        <a href="shop_shotgun.html">SHOTGUN</a>
+        <a href="shop_handgun.html">HANDGUN</a>
+        <a href="shop_melee.html">MELEE</a>
+        <a href="shop_throwable.html">THROWABLE</a>
+        <a href="shop_etc.html">ETC</a>
+        <div class="animation"></div> <!-- Animation div placed here -->
+      </nav>
+      <div class="card-container">
+        <div class="card" onclick="openModal('S12k', 'S12K - A semi-automatic shotgun known for its versatility in close-quarters combat. Chambered for 12-gauge shells, it delivers significant stopping power and fast follow-up shots, making it an effective choice for engaging enemies at close range.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-s12k.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="M16A4 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-s12k.png" alt="Tommy Gun Image" class="image2">
+          </div>
+          <h3>S12k</h3>
+        </div>
+
+        <div class="card" onclick="openModal('S1897', 'S1897 - A classic pump-action shotgun renowned for its reliability and powerful stopping power. Chambered for 12-gauge shells, it excels in close-quarters combat, delivering devastating impact with each shot.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-s1897.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="UMP45 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-s1897.png" alt="M416 Image" class="image2">
+          </div>
+          <h3>S1897</h3>
+        </div>
+
+        <div class="card" onclick="openModal('S686', 'S686 - A double-barrel shotgun known for its elegance and high stopping power. Chambered for 12-gauge shells, it offers rapid follow-up shots with two rounds and is highly effective in close-quarters engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-s686.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="SCAR-L Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-s686.png" alt="Micro UZI Image" class="image2">
+          </div>
+          <h3>S686</h3>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="openModal('DBS', 'DBS - A double-barreled shotgun that combines the firepower of two shots with a unique design. Chambered for 12-gauge shells, it excels in close-quarters combat, delivering devastating damage with each trigger pull.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-dbs.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="G36C Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-dbs.png" alt="Vector Image" class="image2">
+          </div>
+          <h3>DBS</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Sawed Off', 'Sawed Off Shotgun - A compact and powerful firearm, modified for increased maneuverability in close-quarters combat. Chambered for 12-gauge shells, it delivers a wide spread of shot, making it highly effective at short range.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-sawed_off.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="QBZ95 Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-sawed_off.png" alt="PP-19 Bizon Image" class="image2">
+          </div>
+          <h3>Sawed Off</h3>
+        </div>
+
+        <div class="card" onclick="openModal('O12', 'O12 - A semi-automatic shotgun known for its high rate of fire and versatility. Chambered for 12-gauge shells, it offers quick follow-up shots and significant stopping power, making it ideal for close-quarters engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-o12.png')">
+          <div class="image-container">
+            <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="MP5K Image" class="image1">
+            <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-o12.png" alt="MP5K Image" class="image2">
+          </div>
+          <h3>O12</h3>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()" 
+          style="cursor: pointer; color: black; display: inline-block; transition: transform 0.3s ease, color 0.3s ease;" 
+          onmouseover="this.style.color='#ffaa00'; this.style.transform='rotate(90deg)'" 
+          onmouseout="this.style.color='black'; this.style.transform='rotate(0deg)'">&times;</span>
+        
+        <!-- Modal Title -->
+        <h2 id="modalTitle" class="hover-effect"></h2>
+        
+        <!-- Modal Content Container -->
+        <div class="modal-body">
+          <!-- Left Side: Modal Details -->
+          <div id="modalDetails" class="details"></div>
+          
+          <!-- Right Side: Modal Image -->
+          <div class="image-containerx">
+            <img id="modalImage" src="" alt="Weapon Image">
+           
+          </div>
+    
+        </div>
+        <hr>
+        <div><a href="#"><button>BUY</button></a></div>
+      </div>
+      
+    </div>
+    
+          </body>
+          <script src="script.js"></script>
+        </html>

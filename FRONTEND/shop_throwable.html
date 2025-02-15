@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Navbar Menu Hover Effect</title>
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        .CATEGORY .animation {
+            position: absolute;
+            height: 2px; /* Height of the underline */
+            top: 45px; /* Position of the animation */
+            background-color: #ffffff; /* White for the animation background */
+            border-radius: 8px;
+            transition: all 0.5s ease 0s;
+            left : 79.8%;
+            width: 110px;
+        }
+        
+        /* Link-specific animation targets */
+        .CATEGORY a:nth-child(1):hover ~ .animation {
+            width: 50px;
+            left: 55px; /* Position under the first link */
+        }
+        
+        .CATEGORY a:nth-child(2):hover ~ .animation {
+            width: 55px;
+            left: 14.5%; /* Position under the second link */
+        }
+        
+        .CATEGORY a:nth-child(3):hover ~ .animation {
+            width: 55px;
+            left: 25.7%; /* Position under the third link */
+        }
+        
+        .CATEGORY a:nth-child(4):hover ~ .animation {
+            width: 40px;
+            left: 37.5%; /* Position under the fourth link */
+        }
+        
+        .CATEGORY a:nth-child(5):hover ~ .animation {
+            width: 100px;
+            left: 46.5%; /* Position under the fifth link */
+        }
+        
+        .CATEGORY a:nth-child(6):hover ~ .animation {
+            width: 100px;
+            left: 57.5%; /* Position under the sixth link */
+        }
+        
+        .CATEGORY a:nth-child(7):hover ~ .animation {
+            width: 75px;
+            left: 69.9%; /* Position under the seventh link */
+        }
+        
+        .CATEGORY a:nth-child(8):hover ~ .animation {
+            width: 100px;
+            left: 79.5%; /* Position under the eighth link */
+        }
+        
+        .CATEGORY a:nth-child(9):hover ~ .animation {
+            width: 40px;
+            left: 93%; /* Position under the ninth link */
+        }
+    </style>
+</head>
+<body>
+    <nav class="NAV">
+        <a href="index.html">Home</a>
+        <a href="shop.html" id="activesec">SHOP</a>
+        <a href="#">ORDERS</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT US</a>
+        <div class="animation"></div> <!-- Animation div placed here -->
+    </nav>
+    <div class="CONTENT">
+        <div id="weapon_written"><h1>WEAPONS</h1></div>
+        <nav class="CATEGORY">
+            <a href="shop.html">AR</a>
+            <a href="shop_dmr.html">DMR</a>
+            <a href="shop_smg.html">SMG</a>
+            <a href="shop_sr.html">SR</a>
+            <a href="shop_shotgun.html">SHOTGUN</a>
+            <a href="shop_handgun.html">HANDGUN</a>
+            <a href="shop_melee.html">MELEE</a>
+            <a href="shop_throwable.html" id="mainsec">THROWABLE</a>
+            <a href="shop_etc.html">ETC</a>
+            <div class="animation"></div> <!-- Animation div placed here -->
+        </nav>
+
+        <div class="card-container">
+            <div class="card" onclick="openModal('Stun Grenade', 'Stun Grenade - A tactical explosive device that disorients and temporarily incapacitates enemies with a blinding flash and deafening sound. Ideal for tactical entries and disrupting enemy movements during engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-stun_grenade.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="Stun Grenade Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-stun_grenade.png" alt="Stun Grenade Image" class="image2">
+                </div>
+                <h3>Stun Grenade</h3>
+            </div>
+
+            <div class="card" onclick="openModal('Frag Grenade', 'Frag Grenade - A versatile explosive device designed to cause damage through fragmentation. Upon detonation, it disperses shrapnel in all directions, making it effective for clearing rooms or dealing with groups of enemies', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-frag_grenade.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="Frag Grenade Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-frag_grenade.png" alt="Frag Grenade Image" class="image2">
+                </div>
+                <h3>Frag Grenade</h3>
+            </div>
+
+            <div class="card" onclick="openModal('Molotov Cocktail', 'Molotov Cocktail - An improvised incendiary device that ignites on impact, creating a fireball and spreading flames over a designated area. Effective for area denial and flushing out enemies from cover.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-molotov_cocktail.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="Molotov Cocktail Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-molotov_cocktail.png" alt="Molotov Cocktail Image" class="image2">
+                </div>
+                <h3>Molotov Cocktail</h3>
+            </div>
+            </div>
+            <div class="card-container">
+            <div class="card" onclick="openModal('Sticky Bomb', 'Sticky Bomb - A versatile explosive device that adheres to surfaces upon deployment, allowing for strategic placement. It detonates after a short delay, making it ideal for ambushes and surprising unsuspecting enemies.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-sticky_bomb.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="Sticky Bomb Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-sticky_bomb.png" alt="Sticky Bomb Image" class="image2">
+                </div>
+                <h3>Sticky Bomb</h3>
+            </div>
+
+            <div class="card" onclick="openModal('Smoke Grenade', 'Smoke Grenade - A tactical device that releases a thick cloud of smoke upon detonation, providing visual concealment for movement and tactical maneuvers. Effective for obscuring enemy visibility and creating cover during engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-smoke_grenade.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="Smoke Grenade Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-smoke_grenade.png" alt="Smoke Grenade Image" class="image2">
+                </div>
+                <h3>Smoke Grenade</h3>
+            </div>
+
+            <div class="card" onclick="openModal('C4', 'C4 Explosive - A powerful plastic explosive that can be detonated remotely. Known for its versatility, it is effective for demolishing structures, vehicles, or creating ambushes, offering a significant tactical advantage in engagements.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-c4.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="C4 Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-c4.png" alt="C4 Image" class="image2">
+                </div>
+                <h3>C4</h3>
+            </div>
+            </div>
+            <div class="card-container">
+            <div class="card" onclick="openModal('BZ Grenade', 'BZ (Benzilate) - A chemical agent used to incapacitate enemies, causing disorientation and confusion. It can impair vision and coordination, making it effective for crowd control and tactical maneuvers in combat situations.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-bz_grenade.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="BZ Grenade Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-bz_grenade.png" alt="BZ Grenade Image" class="image2">
+                </div>
+                <h3>BZ Grenade</h3>
+            </div>
+
+            <div class="card" onclick="openModal('Decoy Grenade', 'Decoy Grenade - A tactical device that emits sound and light to simulate gunfire and distract enemies. It draws attention away from your position, making it useful for flanking maneuvers and creating opportunities for strategic advantages.', 'https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-decoy_grenade.png')">
+                <div class="image-container">
+                    <img src="https://wstatic-prod.pubg.com/web/live/main_e0d2a32/img/09cb859.png" alt="Decoy Grenade Image" class="image1">
+                    <img src="https://wstatic-prod.pubg.com/web/live/static/game-info/weapons/images/viewer/img-weapons-decoy_grenade.png" alt="Decoy Grenade Image" class="image2">
+                </div>
+                <h3>Decoy Grenade</h3>
+            </div>
+            <div class="card">
+            </div>
+        </div>
+        </div>
+    </div>
+
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()" 
+        style="cursor: pointer; color: black; display: inline-block; transition: transform 0.3s ease, color 0.3s ease;" 
+        onmouseover="this.style.color='#ffaa00'; this.style.transform='rotate(90deg)'" 
+        onmouseout="this.style.color='black'; this.style.transform='rotate(0deg)'">&times;</span>
+      
+      <!-- Modal Title -->
+      <h2 id="modalTitle" class="hover-effect"></h2>
+      
+      <!-- Modal Content Container -->
+      <div class="modal-body">
+        <!-- Left Side: Modal Details -->
+        <div id="modalDetails" class="details"></div>
+        
+        <!-- Right Side: Modal Image -->
+        <div class="image-containerx">
+          <img id="modalImage" src="" alt="Weapon Image">
+         
+        </div>
+  
+      </div>
+      <hr>
+      <div><a href="#"><button>BUY</button></a></div>
+    </div>
+    
+  </div>
+  
+        </body>
+        <script src="script.js"></script>
+      </html>
